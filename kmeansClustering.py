@@ -62,11 +62,11 @@ for i in range(iterations):
     prev_centers = center_vectors.copy()
     clusters, clusters_index = assign_to_cluster()
     update_center_vectors()
-    if prev_centers == center_vectors:
+    if prev_centers == center_vectors:  # 중심점 변화 확인
         count += 1
     else:
         count = 0
-    if count >= 10:
+    if count >= 10:  # 10회 동안 변화 없을시 중단
         break
 
 # 출력
